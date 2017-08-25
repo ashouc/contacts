@@ -118,7 +118,7 @@ Method: POST.
 
 Response: none.
 
-Parameters: none.
+Parameters: JSON object (see below).
 **This is the JSON object sent to the server:**
 ```
 {
@@ -146,11 +146,12 @@ Parameters: none.
 ### UPDATE ONE PROFILE (api/contacts/id)
 Purpose: to update all the information for one contact.
 
+Parameters: id.
+
 Method: PUT.
 
 Response: none.
 
-Parameters: id.
 **This is the JSON object sent to the server:**
 ```
 {
@@ -178,11 +179,12 @@ Parameters: id.
 ### DELETE ONE PROFILE (api/contacts/id)
 Purpose: to delete one contact and all the information associated to it.
 
+Parameters: id.
+
 Method: DELETE.
 
 Response: none.
 
-Parameters: id.
 **This is the JSON object sent to the server:**
 ```
 {
