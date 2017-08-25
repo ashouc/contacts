@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Lightspeed Challenge - Alex Shoucri</title>
+    <link rel="stylesheet" href="styles.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/fontawesome/4.7.0/css/font-awesome.min.css">
+
+  </head>
+  <body>
+    <div class="container">
+      <div class="title"><h1><span> </span> contacts</h1></div>
+      <div class="icons">
+        <div class="search-contact"><i class="fa fa-search fa-2x" aria-hidden="true"></i></div>
+        <div class="create-contact"><i class="fa fa-plus fa-2x" aria-hidden="true"></i></div>
+        <div class="sort-list"><p>Sort by <span>last name</span></p></div>
+      </div>
+      <div class="search">
+        <div class="search-input"><input type="text" id="search-contact" placeholder="Search for contact here"/></div>
+        <div class="close"><i class="fa fa-times fa-3x" aria-hidden="true"></i></div>
+      </div>
+      <div id="contacts"><table class="list"></table></div>
+      <div class="form">
+        <form class="create" action="" method="post">
+          <div class="input">
+            <input type="hidden" name="contactId"/>
+            <div class="fullname">
+              <input class="col" type="text" name="firstName" placeholder="First Name" required/>
+              <input class="col" type="text" name="lastName" placeholder="Last Name" optional/>
+            </div>
+            <input class="col" type="text" name="jobTitle" placeholder="Job Title" optional/>
+            <input class="col" type="text" name="address1" placeholder="Address 1 (ex. 1234 Foo Bar Baz Street)" required/>
+            <input class="col" type="text" name="address2" placeholder="Address 2 (optional)" optional/>
+            <input class="col" type="text" name="city" placeholder="City" optional/>
+            <input class="col" type="text" name="province" placeholder="State" optional/>
+            <input class="col" type="text" name="zip" placeholder="Zip code" optional/>
+            <input class="col" type="tel" name="phoneMobile" placeholder="Mobile number (ex. 123-456-7890)" required/>
+            <input class="col" type="tel" name="phoneHome" placeholder="Home number" />
+            <input class="col" type="tel" name="phoneWork" placeholder="Work number" />
+            <input class="col" type="email" name="email" placeholder="your@email.com" />
+            <input class="col" class="add-picture" type="url" name="photo" placeholder="Please add the URL to the profile picture" optional/>
+          </div>
+          <button class="form-btn new" type="button" name="button">Create contact</button><button class="form-btn update" type="button" name="button" style="display: none;">Update contact</button>&nbsp;<button class="form-btn cancel" type="button" name="cancel">Cancel</button>
+        </form>
+      </div>
+    </div>
+  </body>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</html>
