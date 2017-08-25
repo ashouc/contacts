@@ -2,7 +2,7 @@
 The purpose of this project is to design and implement a single page application that list a user's contacts.
 HTML, CSS, JavaScript (with the use of jQuery) and the Font Awesome library were used to complete this project.
 
-The project is available at [alexshoucri.com/contacts-ist](http://alexshoucri.com/contacts-list).
+The project is available at [alexshoucri.com/contacts-list](http://alexshoucri.com/contacts-list).
 
 ## Functionalities
 Several functionalities are found throughout the project.
