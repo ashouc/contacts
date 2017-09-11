@@ -25,10 +25,7 @@ function clickSetup() {
   $('div.sort-list span').on('click', toggleSortBy);
 }
 function cancelFormButton(event){
-  let $inputElements = $(`div.form input`);
-  for (let i = 0; i < $inputElements.length; i++){
-    $inputElements[i].value = "";
-  }
+  clearInputFields();
   $(`div.form`).css('display','none');
   $("div#contacts").css('display', "block");
   getAllContacts();
@@ -81,6 +78,12 @@ function numberOfContacts(num) {
   $(`.title h1 span`).html(num);
   if (num > 0) {
     moreThanNone = true;
+  }
+}
+function clearInputFields(){
+  let $inputElements = $(`div.form input`);
+  for (let i = 0; i < $inputElements.length; i++){
+    $inputElements[i].value = "";
   }
 }
 
@@ -258,12 +261,17 @@ function cancelSearch(event) {
 
 // Create contacts
 function createNewContactForm(event) {
+  // Display 'Create contact' button
+  $(`button.form-btn.update`).css('display','none');
+  $(`button.form-btn.new`).css('display','inline-block');
+  
+  clearInputFields();
   $("div#contacts").css({
     display: "none"
   });
   $('div.form').css({
     display: "block"
-  })
+  });
   $('.info').remove();
 }
 function requestAdd(){
@@ -307,7 +315,7 @@ function contactCreated(){
   // Show on HTML what you found
   $("div.form").css({
     display: "none"
-  })
+  });
   $(".container").append(`
     <div class='confirm'>
       <p class='msg'><i class="fa fa-check-circle-o" aria-hidden="true"></i> Your contact was succesfully created</p>
@@ -395,6 +403,7 @@ function requestUpdate(id){
 }
 function contactUpdated() {
   request = false;
+  clearInputFields();
   $("div.form").css({
     display: "none"
   })
@@ -417,7 +426,6 @@ function contactUpdated() {
     $(`.confirm`).remove();
   }, 1500);
   getAllContacts();
-
 }
 
 // Delete contacts
